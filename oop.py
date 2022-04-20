@@ -15,7 +15,7 @@ class Calculator:
           
 
     def __add__(self,other):
-        return self.__calculate() + other
+        return self.answer + other.answer
     
     def __sub__(self,other):
         return self.__calculate() - other
@@ -37,15 +37,17 @@ class Calculator:
 a = Calculator(6,3,"/")
 a1 = Calculator(63,3,"/")
 
-print(a())
-print(a1())
-b = a()+a1()
-# a+=a1()
-a = a+a1()
+print(a+a1)
+
+a+=a1
 print(a)
 
+a*=0
+print(a)
 
+a = a1/6
 
+print(a)
 
 
 
