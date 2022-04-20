@@ -15,29 +15,44 @@ class Calculator:
           
 
     def __add__(self,other):
-        return self.answer + other.answer
-    
+        try:
+            return self.answer + other.answer
+        except:
+            return self.answer + other.answer    
     def __sub__(self,other):
-        return self.__calculate() - other
-
+        try:
+            return self.answer - other.answer
+        except:
+            return self.answer - other.answer
     def __mul__(self,other):
-        return self.__calculate() * other
+        try:
+            return self.answer * other.answer
+        except:
+            return self.answer * other.answer
 
     def __truediv__(self,other):
-        return self.__calculate()/other
+        try:
+            return self.answer/other.answer
+        except:
+            return self.answer/other.answer
 
     def __mod__(self,other):
-        return self.__calculate()%other
-    
+        try:
+            return self.answer%other.answer
+        except:
+            return self.answer%other.answer
+
     def __floordiv__(self,other):
-        return self.__calculate()//other
-    
+        try:
+            return self.answer//other.answer
+        except:
+            return self.answer//other
    
   
 a = Calculator(6,3,"/")
 a1 = Calculator(63,3,"/")
 
-print(a+a1)
+print(a-a1)
 
 a+=a1
 print(a)
@@ -45,8 +60,8 @@ print(a)
 a*=0
 print(a)
 
-a = a1/6
 
+a = a1//6
 print(a)
 
 
